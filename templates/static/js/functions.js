@@ -3,12 +3,12 @@ function analyzeData(){
     if(checkInput(input)){
       $.ajax({
         type: "POST",
-        url: "/analyze",
+        url: "/analyze-dna",
         dataType:'Json',
         data: JSON.stringify(
             {"dna_sequence":input}),
         success: function(data){
-            window.location = "/analyze"
+            window.location.href = "/analyze"
 
         }
 
@@ -29,7 +29,7 @@ function analyzeData(){
   
 
 function checkInput(input_string){
-    if(/[-{1}[G|U|A|T][d|r|m][o|s]*]*/.test(input_string)){
+    if(/^(-{1}[G|U|A|T|C]+[d|r|m]+[o|s]?)+/.test(input_string)){
       // let input = document.getElementById("input-group")
       // input.removeChild(document.getElementsByClassName("invalid-feedback"))
       return true

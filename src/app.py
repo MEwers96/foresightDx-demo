@@ -24,9 +24,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/analyze", methods=["GET", "POST"])
+@app.route("/analyze-dna", methods=["GET", "POST"])
 def analyze():
-    print("HERE")
     print(request.get_data())
     request_data = loads(request.get_data())
 
@@ -36,7 +35,7 @@ def analyze():
     parts_info = get_units_and_links(dna_sequence)
     mass_info = get_molecular_masses(dna_sequence)
 
-    print(shipping_label, parts_info, mass_info)
+    print("SHIPPING LABEL: ", shipping_label, "\nBase Sugars and links: ", parts_info, "\nMass Info: ", mass_info)
     return render_template("analyze.html", shipping_label=shipping_label, parts_info=parts_info, mass_info=mass_info)
 
 
