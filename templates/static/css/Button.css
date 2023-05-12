@@ -1,0 +1,80 @@
+
+
+.mybtn {
+    /* background-size: 400% 400%; */
+    
+    /* background: linear-gradient(350deg, #1a36d3, #ba1eda); */
+    display: inline-block flex;
+    align-content: center;
+    width: 15dvb;
+    height: 5dvb;
+    border: none;
+    outline: none;
+    color: #000000;
+    background-color: #ffffff;
+    cursor:pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    -webkit-animation: buttonGradient 15s ease infinite;
+    -moz-animation: buttonGradient 15s ease infinite;
+    animation: navGradient 15s ease infinite;
+    opacity: 0;
+    -webkit-animation: fadeIn 2s;
+    animation-delay: .75s;
+    animation-fill-mode: forwards;
+
+}
+
+.mybtn:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.mybtn:disabled:before{
+  cursor: not-allowed;
+  background-color: #6d6d6d;
+  color: #cecece;
+}
+.mybtn:disabled:hover{
+  background-color: #6d6d6d;
+  cursor: not-allowed;
+
+  color: #000000;
+}
+.mybtn:active {
+    /* background-color: azure;
+    background: #fff; */
+    color: #ffffff
+}
+
+.mybtn:active:after {
+    background: transparent;
+}
+
+
+.mybtn:hover:before {
+    opacity: 1;
+}
+
+.mybtn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  
+}

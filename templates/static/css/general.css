@@ -1,0 +1,67 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(39, 48, 48);
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+.welcome-text{
+    display: block;
+    color:azure;
+    font-size:6vb;
+    align-content: center;
+    padding: 0px;
+    opacity: 0;
+    
+    animation: fadeIn 1.5s;    
+    animation-fill-mode: forwards;
+}
+.p-title{
+    display: inline-block flex;
+    text-align: center;
+    /* margin: 6dvi; */
+}
+.p-body{
+    display: inline-block flex;
+    text-align: center;
+    align-content: center;
+    margin: 6dvi;
+}
+
+.welcome-body{
+color:azure;
+font-size:1.5dvi;
+margin: 3dvi;
+
+align-content: center;
+/* transition: .8s; */
+opacity: 0;
+animation: fadeIn 1.5s;
+
+
+animation-delay: 1s;
+animation-fill-mode: forwards;
+}
+
+}
+ 
